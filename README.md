@@ -9,6 +9,20 @@ Status:
 
 Part of the [commitizen](https://github.com/commitizen/cz-cli) family. Prompts for [conventional changelog](https://github.com/conventional-changelog/conventional-changelog) standard.
 
+## Translate in Chinese
+
+> 命令行提示均已翻译为中文版
+
+## Installation
+
+```bash
+npm install -g git+https://git@github.com:Laev/cz-conventional-changelog.git
+```
+
+```bash
+yarn global add git+https://git@github.com:Laev/cz-conventional-changelog.git
+```
+
 ## Configuration
 
 ### package.json
