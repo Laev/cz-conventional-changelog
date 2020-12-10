@@ -1,7 +1,7 @@
 'format cjs';
 
 var engine = require('./engine');
-var conventionalCommitTypes = require('conventional-commit-types');
+var conventionalCommitTypes = require('./types.json');
 var configLoader = require('commitizen').configLoader;
 
 var config = configLoader.load() || {};
@@ -25,13 +25,13 @@ var options = {
     (process.env.CZ_MAX_LINE_WIDTH &&
       parseInt(process.env.CZ_MAX_LINE_WIDTH)) ||
     config.maxLineWidth ||
-    100
+    100,
 };
 
-(function(options) {
+(function (options) {
   try {
     var commitlintLoad = require('@commitlint/load');
-    commitlintLoad().then(function(clConfig) {
+    commitlintLoad().then(function (clConfig) {
       if (clConfig.rules) {
         var maxHeaderLengthRule = clConfig.rules['header-max-length'];
         if (
